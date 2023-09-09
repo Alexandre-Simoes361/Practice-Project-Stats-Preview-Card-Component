@@ -1,0 +1,49 @@
+:root{
+    --clr-primary-200: hsl(233, 47%, 7%);
+    --clr-primary-400: hsl(244, 38%, 16%);
+    --clr-primary-600: hsl(277, 64%, 61%);
+
+    --clr-neutral-200: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-600: hsla(0, 0%, 100%, 0.6);
+
+    --ff-h: "Inter", sans-serif;
+    --ff-p: "Lexend Deca", sans-serif;
+
+    --fw--regular: 400;
+    --fw--bold: 700;
+
+    --fs--p: 15px;
+    --fs--headings: 40px;
+}
+
+*{
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    min-width: 100svw;
+    background-color: var(--clr-primary-200);
+    overflow: hidden;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 900px;
+    background-color: var(--clr-primary-400);
+}
+
+.card .image{
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
