@@ -13,13 +13,50 @@
     --fw--regular: 400;
     --fw--bold: 700;
 
-    --fs--p: 15px;
-    --fs--headings: 40px;
+    /*mobile font-sizes*/
+
+    --fs--p: .95rem;
+    --fs--headings: 1.7rem;
+    --fs--subheadings: 1.5rem;
+    --fs--stats: .72rem;
+
+    /*desktop font-sizes*/
+
+    --fs--dp: .8rem;
+    --fs--dheadings: 1.9rem;
+    --fs--dsubheadings: 1.1rem;
+    --fs--dstats: .6rem;
 }
 
 *{
     box-sizing: border-box;
     word-break: break-word;
+}
+
+h1{
+    font-family: var(--ff-h);
+    font-weight: var(--fw--bold);
+    font-size: var(--fs--headings);
+    color: var(--clr-neutral-200);
+    line-height: 2rem;
+}
+
+h2{
+    font-family: var(--ff-h);
+    font-size: var(--fs--subheadings);
+    font-weight: var(--fw--bold);
+    color: var(--clr-neutral-200);
+}
+
+p{
+    font-family: var(--ff-h);
+    font-size: var(--fs--p);
+    font-weight: var(--fw--regular);
+    color: var(--clr-neutral-400);
+}
+
+span{
+    color: var(--clr-primary-600);
 }
 
 body{
@@ -29,7 +66,7 @@ body{
     min-height: 100svh;
     min-width: 100svw;
     background-color: var(--clr-primary-200);
-    overflow-x: hidden;
+    text-align: center;
 }
 
 .card{
@@ -37,12 +74,102 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 900px;
+    max-width: 21rem;
     background-color: var(--clr-primary-400);
+    overflow: hidden;
+    border-radius: 0.6rem;
 }
 
-.card .image{
+img,
+picture{
     max-width: 100%;
     display: block;
+    mix-blend-mode: multiply;
+    opacity: 87%;
+}
+
+.image{
+    background-color: var(--clr-primary-600);
+}
+
+.sales_pitch{
+    padding: 0rem 2.4rem 1.8rem;
+    margin-top: 1.3rem;
+    line-height: 1.5rem;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats p{
+    color: var(--clr-neutral-600);
+    font-family: var(--ff-h);
+    font-weight: var(--fw--regular);
+    letter-spacing: .15rem;
+    font-size: var(--fs--stats);
+    text-transform: uppercase;
+}
+
+.stats h2{
+    margin: -0.3rem;
+}
+
+@media (min-width: 44.1rem){
+    *{
+        text-align: left;
+    }
+
+    h1{
+        font-size: var(--fs--dheadings);
+    }
+
+    h2{
+        font-size: var(--fs--dsubheadings);
+    }
+
+    p{
+        font-size: var(--fs--dp);
+    }
+
+    .card{
+        flex-direction: row-reverse;
+        max-width: 55rem;
+    }
+
+    .alt_flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 2rem 0rem 0rem 4rem;
+    }
+
+    .sales_pitch{
+        display: flex;
+        flex-direction: column;
+        margin: 0rem;
+        padding: 0rem 13rem 0rem 0rem;
+    }
+
+    .stats{
+        flex-direction: row;
+        gap: 3rem;
+        margin: 3rem 0rem 2rem 0rem;
+        padding: 0rem 13rem 0rem 0rem;
+    }
+
+    .stats p{
+        font-size: var(--fs--dstats);
+    }
+
+    .companies{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
 }
