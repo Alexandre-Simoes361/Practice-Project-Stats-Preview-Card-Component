@@ -13,19 +13,10 @@
     --fw--regular: 400;
     --fw--bold: 700;
 
-    /*mobile font-sizes*/
-
     --fs--p: .95rem;
     --fs--headings: 1.7rem;
     --fs--subheadings: 1.5rem;
     --fs--stats: .72rem;
-
-    /*desktop font-sizes*/
-
-    --fs--dp: .8rem;
-    --fs--dheadings: 1.9rem;
-    --fs--dsubheadings: 1.1rem;
-    --fs--dstats: .6rem;
 }
 
 *{
@@ -80,12 +71,11 @@ body{
     border-radius: 0.6rem;
 }
 
-img,
-picture{
+img{
     max-width: 100%;
     display: block;
     mix-blend-mode: multiply;
-    opacity: 87%;
+    opacity: 75%;
 }
 
 .image{
@@ -93,16 +83,16 @@ picture{
 }
 
 .sales_pitch{
-    padding: 0rem 2.4rem 1.8rem;
-    margin-top: 1.3rem;
+    padding: 0rem 2.4rem .7rem;
+    margin-top: 2.7rem;
     line-height: 1.5rem;
 }
 
 .stats{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: .2rem;
+    margin-bottom: 1.7rem;
 }
 
 .stats p{
@@ -115,28 +105,34 @@ picture{
 }
 
 .stats h2{
-    margin: -0.3rem;
+    margin-bottom: -0.3rem;
 }
 
 @media (min-width: 44.1rem){
-    *{
+    :root{
+        --fs--p: .75rem;
+        --fs--headings: 1.8rem;
+        --fs--subheadings: 1.2rem;
+        --fs--stats: .55rem;
+    }
+    
+    body{
         text-align: left;
     }
 
-    h1{
-        font-size: var(--fs--dheadings);
+    img{
+      height: 100%;
+      display: block; 
     }
 
-    h2{
-        font-size: var(--fs--dsubheadings);
-    }
-
-    p{
-        font-size: var(--fs--dp);
+    .image{
+        height: 100%;
+        width: 100%;
     }
 
     .card{
         flex-direction: row-reverse;
+        flex-grow: 1;
         max-width: 55rem;
     }
 
@@ -145,31 +141,27 @@ picture{
         flex-direction: column;
         justify-content: center;
         align-items: left;
-        padding: 2rem 0rem 0rem 4rem;
+    }
+
+    .image_container{
+        height: 100%;
+        width: 100%;
+        padding-left: 1rem;
+        margin-left: 2rem;
     }
 
     .sales_pitch{
         display: flex;
         flex-direction: column;
-        margin: 0rem;
-        padding: 0rem 13rem 0rem 0rem;
+        margin: 0rem 3rem 1.5rem 3.5rem;
+        padding: 0rem 0rem 0rem 0rem;
+        line-height: 1.3rem;
     }
 
     .stats{
         flex-direction: row;
         gap: 3rem;
-        margin: 3rem 0rem 2rem 0rem;
-        padding: 0rem 13rem 0rem 0rem;
-    }
-
-    .stats p{
-        font-size: var(--fs--dstats);
-    }
-
-    .companies{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
+        margin: 0rem 0rem 0rem 3.5rem;
+        padding: 0rem 0rem 0rem 0rem;
     }
 }
